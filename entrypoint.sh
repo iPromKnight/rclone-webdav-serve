@@ -76,6 +76,7 @@ fi
 if [ "$ENABLE_RC" = "true" ] || [ "$ENABLE_RC" = "1" ]; then
     CMD="$CMD \
        --rc \
+       --rc-addr=0.0.0.0:5572 \
        --rc-enable-metrics \
        --rc-no-auth \
        --rc-web-gui \
