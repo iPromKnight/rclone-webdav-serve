@@ -1,0 +1,18 @@
+services:
+  rclone-webdav:
+    image: ipromknight/rclone-webdav:latest
+    container_name: rclone-webdav
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    environment:
+      MOUNTNAME: "mount:" # Name of the mount within the rclone.conf config file
+      USER: test
+      PASS: test
+      ENABLE_AUTH: "true"
+      ENABLE_RC: "false"
+      SKIP_SSL_VERIFY: "true"
+      USE_MMAP: "true"
+    volumes:
+      - ./rclone.conf:/data/rclone.conf
+      - ./cache:/cache
