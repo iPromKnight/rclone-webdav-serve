@@ -37,5 +37,5 @@ docker run -d \
   -v /path/to/rclone.conf:/data/rclone.conf \
   -v /path/to/cache:/cache \
   --name torbox-webdav \
-  ipromknight/rclone-webdav:latest
+  ipromknight/rclone-webdav-serve:latest
 ```
